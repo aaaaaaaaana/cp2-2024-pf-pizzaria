@@ -19,7 +19,8 @@ public class Pizzaria {
 
 
     @Id
-    @GeneratedValue( strategy = GenerationType.SEQUENCE, generator = "id_seq_pizzaria" )
+    @GeneratedValue( strategy = GenerationType.SEQUENCE, generator = "seq_pizzaria")
+    @SequenceGenerator(name = "seq_pizzaria", sequenceName = "seq_pizzaria", allocationSize = 1)
     @Column( name = "id_pizzaria" )
     private Long id;
 

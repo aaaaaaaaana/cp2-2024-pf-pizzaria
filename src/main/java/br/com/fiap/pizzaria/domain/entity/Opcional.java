@@ -19,8 +19,9 @@ public class Opcional {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "id_seq_opcional")
-    @SequenceGenerator(name = "id_opcional", sequenceName = "id_sq_opcional", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_opcional")
+    @SequenceGenerator(name = "seq_opcional", sequenceName = "seq_opcional", allocationSize = 1)
+    @Column(name = "id_seq_opcional")
     private Long id;
 
 
@@ -28,13 +29,13 @@ public class Opcional {
     private String nome;
 
 
-    @Column(name = "preco_opcional")
+    @Column(name = "preco")
     private BigDecimal preco;
 
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
     @JoinColumn(
-            name = "sabor_opcional",
+            name = "sabor",
             referencedColumnName = "id_sabor",
             foreignKey = @ForeignKey(name = "fk_sabor_opcional")
     )

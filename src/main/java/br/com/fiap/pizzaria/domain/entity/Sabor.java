@@ -15,13 +15,13 @@ public class Sabor {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "id_sq_sabor")
-    @SequenceGenerator(name = "id_sq_sabor", sequenceName = "id_sq_sabor", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_sabor")
+    @SequenceGenerator(name = "sq_sabor", sequenceName = "sq_sabor", allocationSize = 1)
     @Column(name = "id_sabor")
     private Long id;
 
-
-    @Column(name = "nm_sabor", unique = true)
+    //    @Column(name = "nm_sabor", unique = true)
+    @Column(name = "nm_sabor")
     private String nome;
 
 
