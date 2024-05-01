@@ -29,8 +29,10 @@ public class Produto {
     private Long id;
 
 
+
     @Column(name = "nm_produto")
     private String nome;
+
 
 
     @ManyToOne( fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST} )
@@ -40,6 +42,7 @@ public class Produto {
             foreignKey = @ForeignKey(name = "fk_sabor_produto")
     )
     private Sabor sabor;
+
 
 
     @Column(name = "preco_produto")

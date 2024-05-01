@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+
 @Data
 @Builder
 @AllArgsConstructor
@@ -18,14 +19,17 @@ import java.util.Set;
 public class Pizzaria {
 
 
+
     @Id
     @GeneratedValue( strategy = GenerationType.SEQUENCE, generator = "id_seq_pizzaria" )
     @Column( name = "id_pizzaria" )
     private Long id;
 
 
+
     @Column( name = "nm_pizzaria", unique = true)
     private String nome;
+
 
 
     @ManyToMany( fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})

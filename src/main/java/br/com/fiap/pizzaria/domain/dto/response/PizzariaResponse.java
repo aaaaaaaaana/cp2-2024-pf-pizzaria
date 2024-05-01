@@ -8,9 +8,12 @@ import java.util.Collection;
 @Builder
 public record PizzariaResponse (
 
+
         Long id,
 
+
         String nome,
+
 
         Collection<ProdutoResponse> cardapio
 
