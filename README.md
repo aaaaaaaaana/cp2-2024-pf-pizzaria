@@ -4,7 +4,7 @@ CP II - **Java Advanced** aplicado em 29/04/2024.
 
 | ![](documentos/fiap.jpg)                 | **Java Advanced** |
 |------------------------------------------|-------------------|
-| **ALUNO:**                               | **TURMA:** 2TDSPF |
+| **ALUNOs:** Ana Luiza e Beatriz Santi    | **TURMA:** 2TDSPF |
 | **PROFESSOR:** Benefrancis do Nascimento | 29/04/2024        |
 | **CP II**                                | ****              |
 
