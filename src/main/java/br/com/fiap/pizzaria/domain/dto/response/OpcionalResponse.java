@@ -1,4 +1,24 @@
 package br.com.fiap.pizzaria.domain.dto.response;
 
-public class OpcionalResponse {
+
+import lombok.Builder;
+
+import java.math.BigDecimal;
+
+@Builder
+public record OpcionalResponse (
+
+        String nome,
+
+        Long id,
+
+        SaborResponse sabor,
+
+        BigDecimal preco
+
+
+
+
+
+){
 }

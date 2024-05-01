@@ -1,6 +1,14 @@
 package br.com.fiap.pizzaria.domain.service;
 
 
+import br.com.fiap.pizzaria.domain.dto.request.OpcionalRequest;
+import br.com.fiap.pizzaria.domain.dto.request.PizzariaRequest;
+import br.com.fiap.pizzaria.domain.dto.request.ProdutoRequest;
+import br.com.fiap.pizzaria.domain.dto.request.SaborRequest;
+import br.com.fiap.pizzaria.domain.entity.Opcional;
+import br.com.fiap.pizzaria.domain.entity.Pizzaria;
+import br.com.fiap.pizzaria.domain.entity.Produto;
+import br.com.fiap.pizzaria.domain.entity.Sabor;
 import org.springframework.data.domain.Example;
 
 import java.util.Collection;
@@ -50,6 +58,12 @@ public interface ServiceDTO<Entity, Request, Response> {
      */
     public Entity toEntity(Request dto);
 
+    Pizzaria toEntity(PizzariaRequest dto);
+
+    Produto toEntity(ProdutoRequest dto);
+
+    Sabor toEntity(SaborRequest dto);
+
     /**
      * Transforma uma Entidade em um DTO de Resposta (ResponseDTO)
      *
@@ -57,6 +71,5 @@ public interface ServiceDTO<Entity, Request, Response> {
      * @return
      */
     public Response toResponse(Entity e);
-
 
 }

@@ -1,4 +1,32 @@
 package br.com.fiap.pizzaria.domain.dto.request;
 
-public class ProdutoRequest {
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
+
+import java.math.BigDecimal;
+
+
+
+public record ProdutoRequest (
+
+
+
+        @NotNull(message = "Por favor, forneça um ID. Este campo não pode ser nulo.")
+        Long id,
+
+        @NotNull(message = "Por favor, insira um nome. Este campo não pode ser nulo.")
+        String nome,
+
+        @NotNull(message = "Por favor, selecione um sabor. Este campo não pode ser nulo.")
+        AbstractRequest sabor,
+
+
+        @Positive(message = "Por favor, insira um preço válido. O preço deve ser um número positivo.")
+        @NotNull(message = "Por favor, insira um preço. Este campo não pode ser nulo.")
+
+
+        BigDecimal preco
+
+
+){
 }
