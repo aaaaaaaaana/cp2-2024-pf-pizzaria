@@ -12,12 +12,8 @@ public record SaborResponse (
 
 
         Long id,
-
         String nome,
-
         String descricao
-
-
 
 ){
 }

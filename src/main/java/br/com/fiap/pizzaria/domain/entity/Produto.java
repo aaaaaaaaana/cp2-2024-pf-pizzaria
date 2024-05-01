@@ -23,8 +23,8 @@ public class Produto {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "id_sq_produto")
-    @SequenceGenerator(name = "id_sq_produto", sequenceName = "id_sq_produto", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_produto")
+    @SequenceGenerator(name = "sq_produto", sequenceName = "sq_produto", allocationSize = 1)
     @Column(name = "id_produto")
     private Long id;
 

@@ -11,19 +11,10 @@ public record ProdutoResponse (
 
 
         Long id,
-
         String nome,
-
-        SaborResponse sabor,
-
+        Collection<OpcionalResponse> opcional,
         BigDecimal preco,
-
-        Collection<OpcionalResponse> opcional
-
-
-
-
-
+        SaborResponse sabor
 
 ){
 }
