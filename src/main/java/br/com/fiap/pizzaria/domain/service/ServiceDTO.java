@@ -1,6 +1,8 @@
 package br.com.fiap.pizzaria.domain.service;
 
 
+import br.com.fiap.pizzaria.domain.dto.response.PizzariaResponse;
+import br.com.fiap.pizzaria.domain.entity.Pizzaria;
 import org.springframework.data.domain.Example;
 
 import java.util.Collection;
@@ -57,6 +59,5 @@ public interface ServiceDTO<Entity, Request, Response> {
      * @return
      */
     public Response toResponse(Entity e);
-
 
 }

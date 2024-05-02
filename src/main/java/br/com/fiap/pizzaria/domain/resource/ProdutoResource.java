@@ -1,6 +1,5 @@
 package br.com.fiap.pizzaria.domain.resource;
 
-import br.com.fiap.pizzaria.domain.dto.request.PizzariaRequest;
 import br.com.fiap.pizzaria.domain.dto.request.ProdutoRequest;
 import br.com.fiap.pizzaria.domain.dto.response.OpcionalResponse;
 import br.com.fiap.pizzaria.domain.dto.response.ProdutoResponse;
@@ -120,7 +119,7 @@ public class ProdutoResource implements ResourceDTO<ProdutoRequest, ProdutoRespo
 
     @Transactional
     @PostMapping
-    public ResponseEntity<ProdutoResponse> save(@RequestBody PizzariaRequest produto) {
+    public ResponseEntity<ProdutoResponse> save(@RequestBody ProdutoRequest produto) {
 
         var entity = produtoService.toEntity(produto);
         var saved = produtoService.save(entity);

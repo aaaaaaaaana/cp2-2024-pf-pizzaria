@@ -93,7 +93,7 @@ public class PizzariaResource implements ResourceDTO<PizzariaRequest, PizzariaRe
     @Override
     @Transactional
     @PostMapping
-    public ResponseEntity<PizzariaResponse> save(@RequestBody PizzariaRequest r) {
+    public ResponseEntity<PizzariaResponse> save(@RequestBody ProdutoRequest r) {
 
 
         var entity = pizzariaService.toEntity(r);
