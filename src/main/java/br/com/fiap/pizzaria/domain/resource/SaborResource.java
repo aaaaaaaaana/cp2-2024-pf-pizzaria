@@ -1,5 +1,6 @@
 package br.com.fiap.pizzaria.domain.resource;
 
+import br.com.fiap.pizzaria.domain.dto.request.ProdutoRequest;
 import br.com.fiap.pizzaria.domain.dto.request.SaborRequest;
 import br.com.fiap.pizzaria.domain.dto.response.SaborResponse;
 import br.com.fiap.pizzaria.domain.entity.Sabor;
