@@ -65,6 +65,6 @@ public class OpcionalService implements ServiceDTO<Opcional, OpcionalRequest, Op
     public OpcionalResponse toResponse(Opcional e) {
 
         var sabores = saborService.toResponse(e.getSabor());
-        return OpcionalResponse.builder().id(e.getId()).nome(e.getNome()).sabor(sabores).build();
+        return OpcionalResponse.builder().id(e.getId()).nome(e.getNome()).saborResponse(sabores).build();
     }
 }
