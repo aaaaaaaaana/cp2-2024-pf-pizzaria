@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SaborRepository extends JpaRepository<Sabor, Long> {
+    Object toResponse(Sabor sabor);
 }

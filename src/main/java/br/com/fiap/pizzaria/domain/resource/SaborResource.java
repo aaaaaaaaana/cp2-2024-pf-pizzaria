@@ -1,8 +1,15 @@
 package br.com.fiap.pizzaria.domain.resource;
 
-import br.com.fiap.pizzaria.domain.dto.request.ProdutoRequest;
+import br.com.fiap.pizzaria.domain.dto.request.OpcionalRequest;
+import br.com.fiap.pizzaria.domain.dto.request.PizzariaRequest;
 import br.com.fiap.pizzaria.domain.dto.request.SaborRequest;
+import br.com.fiap.pizzaria.domain.dto.response.OpcionalResponse;
+import br.com.fiap.pizzaria.domain.dto.response.PizzariaResponse;
+import br.com.fiap.pizzaria.domain.dto.response.ProdutoResponse;
 import br.com.fiap.pizzaria.domain.dto.response.SaborResponse;
+import br.com.fiap.pizzaria.domain.entity.Opcional;
+import br.com.fiap.pizzaria.domain.entity.Pizzaria;
+import br.com.fiap.pizzaria.domain.entity.Produto;
 import br.com.fiap.pizzaria.domain.entity.Sabor;
 import br.com.fiap.pizzaria.domain.service.SaborService;
 import jakarta.validation.Valid;
@@ -14,82 +21,86 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-
-
 import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
-
-
 
 @RestController
 @RequestMapping("/sabores")
 public class SaborResource implements ResourceDTO<SaborRequest, SaborResponse> {
 
-
-
     @Autowired
     private SaborService saborService;
 
-
-
     @GetMapping
     public ResponseEntity<Collection<SaborResponse>> findAll(
-
             @RequestParam(name = "nome", required = false) String nome,
             @RequestParam(name = "descricao", required = false) String descricao
-
-
     ) {
-
-
         var sabor = Sabor.builder()
                 .nome(nome)
                 .descricao(descricao)
                 .build();
-
 
         ExampleMatcher matcher = ExampleMatcher
                 .matchingAll()
                 .withIgnoreNullValues()
                 .withIgnoreCase();
 
-
         Example<Sabor> example = Example.of(sabor, matcher);
         Collection<Sabor> sabores = saborService.findAll(example);
 
-
         var response = sabores.stream().map(saborService::toResponse).toList();
         return ResponseEntity.ok(response);
-
-
     }
 
 
 
     @GetMapping("/{id}")
     public ResponseEntity<SaborResponse> findById(@PathVariable Long id) {
-
         var entity = saborService.findById(id);
-
-        if (Objects.isNull(entity))
-            return ResponseEntity.notFound().build();
-
-
+        if (Objects.isNull(entity)) return ResponseEntity.notFound().build();
         var response = saborService.toResponse(entity);
         return ResponseEntity.ok(response);
-
     }
 
 
+    @Override
+    public ResponseEntity<SaborResponse> save(OpcionalRequest request) {
+        return null;
+    }
+
+    @Override
+    public ResponseEntity<PizzariaResponse> save(PizzariaRequest r) {
+        return null;
+    }
+
+    @Override
+    public OpcionalResponse toResponse(Opcional e) {
+        return null;
+    }
+
+    @Override
+    public PizzariaResponse toResponse(Pizzaria e) {
+        return null;
+    }
+
+    @Override
+    public ProdutoResponse toResponse(Produto e) {
+        return null;
+    }
+
+    @Override
+    public Object toResponse(Sabor sabor) {
+        return null;
+    }
 
     @Transactional
     @PostMapping
     public ResponseEntity<SaborResponse> save(@RequestBody @Valid SaborRequest saborRequest) {
-
         var entity = saborService.toEntity(saborRequest);
         var saved = saborService.save(entity);
         var response = saborService.toResponse(saved);
-
 
         var uri = ServletUriComponentsBuilder
                 .fromCurrentRequest()
@@ -97,9 +108,8 @@ public class SaborResource implements ResourceDTO<SaborRequest, SaborResponse> {
                 .buildAndExpand(saved.getId())
                 .toUri();
 
-
         return ResponseEntity.created(uri).body(response);
-
-
     }
+
+
 }
