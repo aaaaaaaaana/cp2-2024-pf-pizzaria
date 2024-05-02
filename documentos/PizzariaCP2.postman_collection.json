@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "b480fa7d-dd90-4a35-8cd3-3142ba29cc2f",
+		"name": "PizzariaCP2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34651961"
+	},
+	"item": [
+		{
+			"name": "SaboreResources",
+			"item": [
+				{
+					"name": "Post sabores",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"id\": 1,\r\n    \"nome\": \"Pizza 1\",\r\n    \"precos\": 52.25,\r\n    \"sabor\": \"Calabresa\"\r\n}  ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://llocalhost/sabores",
+							"protocol": "http",
+							"host": [
+								"llocalhost"
+							],
+							"path": [
+								"sabores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET sabores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/sabores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sabores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get sabores id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/sabores/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sabores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OpcionalResource",
+			"item": [
+				{
+					"name": "POST opicional",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"id\": 1,\r\n    \"nome\": \"Pizza 1\"\r\n    \r\n}  ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://llocalhost/opcionais",
+							"protocol": "http",
+							"host": [
+								"llocalhost"
+							],
+							"path": [
+								"opcionais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET opicional",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/opcionais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"opcionais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET opicional id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/opcionais/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"opcionais",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProdutoResource",
+			"item": [
+				{
+					"name": "POST produtos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"id\": 1,\r\n    \"nome\": \"Pizza 1\"\r\n    \r\n}  ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/produtos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET by Example produtos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/produtos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET produto id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/produtos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"produtos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST produto id opicional",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"id\": 1,\r\n    \"nome\": \"Pizza 1\"\r\n    \r\n}  ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://logalhost/produtos/1/opcionais",
+							"protocol": "http",
+							"host": [
+								"logalhost"
+							],
+							"path": [
+								"produtos",
+								"1",
+								"opcionais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET protudo id opcional",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/produtos/1/opcionais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"produtos",
+								"1",
+								"opcionais"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PizzariaResource",
+			"item": [
+				{
+					"name": "POST pizzaria",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"id\": 1,\r\n    \"nome\": \"Pizza 1\"\r\n    \r\n}  ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/pizzarias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"pizzarias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET by Example pizzaria",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/pizzarias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"pizzarias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET pizzaria id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/pizzarias/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"pizzarias",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST pizzaria id cardapio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"id\": 1,\r\n    \"nome\": \"Pizza 1\"\r\n    \r\n}  ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost://pizzarias/1/cardapio",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "",
+							"path": [
+								"",
+								"pizzarias",
+								"1",
+								"cardapio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET pizzaria id cardapio",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/pizzarias/1/cardapio",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"pizzarias",
+								"1",
+								"cardapio"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
